@@ -52,6 +52,19 @@ Optional Components are used for flags, and end with a `?`
 "one two -three?"
 ```
 
+For example:
+```
+Command command = new Command(Example, "example", "one two -three? four");
+
+// input = ["this is great"]
+Dictionary<string, string> arguments = Parser.ParseArguments(command, input);
+
+// arguments["one"] == "this"
+// arguments["two"] == "is"
+// arguments["-three"] == "false"
+// arguments["four"] == "great"
+```
+
  
 ## Authors
 
