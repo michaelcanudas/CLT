@@ -33,6 +33,25 @@ Run the `command` with the given `arguments`
 command.Action(arguments);
 ```
 
+### Creating an Argument Template
+
+Every space-separated phrase is considered a component of the template
+```csharp
+"component1 component2 component3"
+```
+
+Named Components are used to assign a given argument a name
+```csharp
+// The first argument will have key "wow"
+"wow so cool"
+```
+
+Optional Components are used for flags, and end with a `?`
+```csharp
+// Running the command with "[arg1] [arg2]" and "[arg1] [arg2] -three" works
+"one two -three?"
+```
+
  
 ## Authors
 
