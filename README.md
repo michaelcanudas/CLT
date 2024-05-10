@@ -53,7 +53,7 @@ Optional Components are used for flags, and end with a `?`
 ```
 
 For example:
-```
+```csharp
 Command command = new Command(Example, "example", "one two -three? four");
 
 // input = ["this is great"]
